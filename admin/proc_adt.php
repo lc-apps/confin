@@ -18,7 +18,7 @@
   $xcrud->table('proc_adt');
 
   // colunas na tabela
-  $xcrud->columns('id,id_adiantado,id_ptres,id_nd,valor_inicial,valor_gasto,valor_recolhido,observacao');  
+  $xcrud->columns('id,id_adiantado,id_ptres,id_nd,valor_inicial,valor_gasto,valor_recolhido,observacao');
 
   // Grava no id_processos da tabela convite id da tabela processos e mostra o numero
   $xcrud->relation('id_processo','processos','id', 'numero');
@@ -41,6 +41,10 @@
   $xcrud->label('id_ptres','PTRES');
   $xcrud->label('id_adiantado','Adiantado');
 
+  // Coloca o Sifrão e a casa decimal no campo
+  $xcrud->change_type('valor_inicial', 'price', '0', array('separator'=>'.','prefix'=>'R$ ','point'=>','));
+  $xcrud->change_type('valor_gasto', 'price', '0', array('separator'=>'.','prefix'=>'R$ ','point'=>','));
+  $xcrud->change_type('valor_recolhido', 'price', '0', array('separator'=>'.','prefix'=>'R$ ','point'=>',')); 
   // Tamanho da coluna da tabela
   $xcrud->column_width('id, id_ptres,id_nd','5%');
   $xcrud->column_width('observacao','30%');
