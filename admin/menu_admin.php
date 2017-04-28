@@ -9,7 +9,7 @@
                     <li><a><i class="fa fa-credit-card-alt"></i> Adiantamentos <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                          <li><a href="adiantado.php"> Adiantados </a></li>
-                         <li><a href=".php"> Cartões </a></li>
+                         <li><a href="cartao_adt.php"> Cartões </a></li>
                          <li><a href="proc_adt.php"> Proc. de Adiantamento </a></li>
 
                         </ul>
